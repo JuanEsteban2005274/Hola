@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% if diccionario %}
+  {% for material in diccionario.values %}
+    <div style="color: white;">{{ material }}</div>
+  {% endfor %}
+{% endif %}
+{% if diccionario %}
+  <select name="" id="api">
+  {% for i, j in diccionario.items %}
+  <option value="{{ i }}">{{ j }}</option>
+  {% endfor %}
+  </select>
+{% endif %}
+{% endblock %}
